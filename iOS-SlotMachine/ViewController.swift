@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         #imageLiteral(resourceName: "Watermelon")
     ]
 */
-/*
+
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-3"),
         #imageLiteral(resourceName: "Apple"),
@@ -45,8 +45,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         #imageLiteral(resourceName: "Grape"),
         #imageLiteral(resourceName: "Spin")
     ]
-*/
 
+/*
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-3"),
         #imageLiteral(resourceName: "Apple"),
@@ -62,7 +62,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         #imageLiteral(resourceName: "Strawberry"),
         #imageLiteral(resourceName: "Watermelon")
     ]
-
+*/
     
  var game: SlotMachineEngine
     
@@ -120,9 +120,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         //suspend the app in second plan
         UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -303,8 +300,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func spin(_ sender: UIButton) {
 
         sender.pulsate()
+        payout.text = game.spin()
         payout.pop()
-        game.spin()
         self.draw()
     }
 }

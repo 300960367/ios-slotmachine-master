@@ -30,22 +30,22 @@ class SlotMachineEngine {
         self.selected4 = self.emptyRow
         self.selected5 = self.emptyRow
 */
-/*
+/**/
         // start with 5 "Spins" (Spin image must be in the UIImage declaration
         self.selected1 = 5
         self.selected2 = 5
         self.selected3 = 5
         self.selected4 = 5
         self.selected5 = 5
-*/
 /**/
+/*
         // start with 5 "Flys"
         self.selected1 = 0
         self.selected2 = 0
         self.selected3 = 0
         self.selected4 = 0
         self.selected5 = 0
-/**/
+*/
         
         self.jackpot = 0
         self.money = 0
@@ -57,10 +57,11 @@ class SlotMachineEngine {
         self.nullBet = true
     }
     
-    public func spin() {
-        spinReels()
+    public func spin() -> String {
+        let bonus = spinReels()
+        return String(bonus)
     }
-    
+
     public func insert(Value value: Int) {
         self.money += value
         
@@ -94,7 +95,7 @@ class SlotMachineEngine {
         return true
     }
     
-    private func spinReels() {
+    private func spinReels() -> Int {
         self.selected1 = rand()
         self.selected2 = rand()
         self.selected3 = rand()
@@ -173,7 +174,7 @@ class SlotMachineEngine {
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
         print("Bonus = ", bonus)  // write bonus in the log
-
+        return bonus
     }
     
     private func rand() -> Int {
