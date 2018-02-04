@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  iOS-SlotMachine
 //
-//  Created by Student on 2018-01-23.
+//  Created by Rafael Timbo and Fernando Ito on 2018-02-04.
 //  Copyright © 2018 Rafael Matos. All rights reserved.
 //
 
