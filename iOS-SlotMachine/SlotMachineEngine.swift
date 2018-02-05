@@ -59,7 +59,28 @@ class SlotMachineEngine {
     
     public func spin() -> String {
         let bonus = spinReels()
-        return String(bonus)
+        return "Bonus: $" + String(bonus)
+    }
+    
+    public func reset() {
+        
+        print("Button reset clicked")
+        /*
+        self.jackpot = 0
+        self.money = 0
+        self.bet = 0
+        self.bonus = 0
+        
+        self.selected1 = 5
+        self.selected2 = 5
+        self.selected3 = 5
+        self.selected4 = 5
+        self.selected5 = 5
+        
+        self.disableFive = true
+        self.disableFifty = true
+        self.nullBet = true
+       */
     }
 
     public func insert(Value value: Int) {
@@ -164,12 +185,14 @@ class SlotMachineEngine {
                 }
             
                 self.bet = 0
+                self.nullBet = true
                 
             } // if (s1 == s2  && s2 == s3 && s3 == s4 && s4 == s5)
             
         } else {
             
             self.bet = 0
+            self.nullBet = true
             
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
